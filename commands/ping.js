@@ -4,6 +4,5 @@ module.exports ={
         .setName('ping'),
     async execute(interaction){
         await interaction.reply('Pong!')
-        
     }
 }

@@ -10,12 +10,12 @@ module.exports = {
                 .setDescription('Youtube URL')
                 .setRequired(true)),
 
-    run: async ({client, interaction}) => {
-        if (!interaction.member.voice.channelId) {
-            return await interaction.reply({
-                content: 'VCにいる必要があります。'
-            });
-        }
+    execute: async ({client, interaction}) => {
+        // if (!interaction.member.voice.channelId) {
+        //     return await interaction.reply({
+        //         content: 'VCにいる必要があります。'
+        //     });
+        // }
         const queue = client.player.createQueue(interaction.guild, {
             metadata: {
                 channel: interaction.channel,
